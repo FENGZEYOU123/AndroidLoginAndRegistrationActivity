@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context=".LoginActivity">
+    <TextView
+        android:id="@+id/txTittle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="简单的登录注册页面,代码清晰便于理解。\nAndroid需求和交流请加wx:  yfz_oom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+    </TextView>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tvLoginPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:text="登录页面" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clAccount"
+            app:layout_constraintTop_toBottomOf="@+id/tvLoginPage"
+            android:layout_marginTop="24dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tvAccount"
+                android:text="账号"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+            <EditText
+                android:id="@+id/edtAccount"
+                app:layout_constraintTop_toBottomOf="@+id/tvAccount"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ed_height">
+            </EditText>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clPassword"
+            app:layout_constraintTop_toBottomOf="@+id/clAccount"
+            android:layout_marginTop="24dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tvPassword"
+                android:text="密码"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+            <EditText
+                android:id="@+id/edtPassword"
+                app:layout_constraintTop_toBottomOf="@+id/tvPassword"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ed_height">
+            </EditText>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:text="点击登录"
+            android:onClick="doLogin"
+            app:layout_constraintTop_toBottomOf="@+id/clPassword"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ed_height">
+        </Button>
+        <Button
+            android:id="@+id/btnRegister"
+            android:text="没有账号？前往注册"
+            android:onClick="doRegister"
+            app:layout_constraintTop_toBottomOf="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ed_height">
+        </Button>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
